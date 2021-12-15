@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="Praktikum02_0110221092_TI03_MuhamadFaqihAzhar.css">
+
+    <script>
+        function konversi(){
+            let x = (document.getElementById("rupiah").value);
+            let y = (document.getElementById("kurs").value);
+
+            console.log (y);
+            console.log (x);
+
+            let usd = x * 14650;
+            let eur = x * 16287;
+            let ringgit = x * 3411;
+            let riyal = x * 3847;
+            let salah = 0
+
+            if (y == "usd") {
+                document.getElementById("asing").value=usd;
+                document.addEventListener('submit', (event) => {
+                    event.preventDefault();
+                });
+                console.log (usd);
+            }
+
+            else if (y == "eur") { 
+                document.getElementById("asing").value=eur;
+                document.addEventListener('submit', (event) => {
+                    event.preventDefault();
+                });
+                console.log (eur);
+            }
+            
+            else if (y == "ringgit") { 
+                document.getElementById("asing").value=ringgit;
+                document.addEventListener('submit', (event) => {
+                    event.preventDefault();
+                });
+                console.log (ringgit);
+            } 
+            
+            else if (y == "riyal") {
+                document.getElementById("asing").value=riyal;
+                document.addEventListener('submit', (event) => {
+                    event.preventDefault();
+                });
+                console.log (riyal);
+            }
+
+            else {
+                value = salah;
+                console.log ("salah");
+            }
+        }
+
+        function hapus_form (){
+            document.getElementById("form1").reset();
+        }
+    </script>
+
+    <title>JS 2 Kurs Rupiah</title>
+</head>
+<body>
+    <div class="container">
+        <form id="form1">
+            <div class="form_hitung__kurs">
+
+                <h1 class="form__tittle">Konversi IDR ke Mata Uang Asing</h1>
+                <div class="form__input-group">
+                    <input type="text" class="form__input" autofocus placeholder="Kurs Asing" id="rupiah" value="">
+                    <div class="padding"></div>
+                    <a href="#"><select id="kurs">
+                        <option value="usd">USD</option>
+                        <option value="eur">Euro</option>
+                        <option value="ringgit">Ringgit</option>
+                        <option value="riyal">Riyal</option>
+                    </select></a>
+                    <div class="padding"></div>
+                </div>
+
+                <div class="form__input-group2">
+                    <div class="padding"></div>
+                    <a href="#"><button class="form__button" id="konversiButton" onclick="konversi()">Konversi</button></a>
+                    <div class="padding"></div>
+                    <input type="text" class="form__input" autofocus placeholder="Rupiah" id="asing" value="">
+                </div>
+
+                <div class="utkreset">
+                    <button type="reset" id="hapus" class="hapuss" onclick="hapus_form()"><img src="reset.svg" alt="reset"></button>
+                </div>
+                
+            </div>
+        </form>
+    </div>
+</body>
+</html>

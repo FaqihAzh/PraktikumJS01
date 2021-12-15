@@ -1,0 +1,116 @@
+* {
+    font-family:sans-serif;
+    margin: 0;
+}
+
+body {
+    --bg-color: #ede9f8;
+    --color-primary: #2d3436;
+    --color-secondary: #252c6a;
+    --border-radius: 5px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-color);
+}
+
+.container {
+    width: 600px;
+    max-width: 600px;
+    margin: 1rem;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    background: white;
+}
+
+.form__tittle {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.form__input {
+    margin-right: 5px;
+    display: block;
+    width: 85%;
+    padding: 1rem;
+    box-sizing: border-box;
+    border-radius: var(--border-radius);
+    border: 1px solid yellowgreen;
+    outline: none;
+    background: #ffffff;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.form__input:focus {
+    border-color: tomato;
+    background: #ffffff;
+    
+}
+
+.form__input-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form__button {
+    margin: auto;
+    width: 100%;
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    border: var(--border-radius);
+    outline: none;
+    cursor: pointer;
+    background: yellowgreen;
+}
+
+select {
+    margin: auto;
+    width: 100%;
+    padding: 0.9rem;
+    font-size: 1.1rem;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    border: var(--border-radius);
+    outline: none;
+    cursor: pointer;
+    background: tomato;
+}
+
+.form__button:active {
+    transform: scale(0.98);
+}
+
+.padding {
+    padding-bottom: 10px;
+}
+
+.form__input-group2 .form__input {
+    width: 100%;
+}
+
+img {
+    width: 20px;
+    height: 20px;
+}
+
+.utkreset {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.hapuss {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    border:none;
+    width: 10%;
+    background:#FEFBF3;
+    cursor: pointer;
+}

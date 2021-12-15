@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="Praktikum01_0110221092_TI03_MuhamadFaqihAzhar.css">
+    
+    <script>
+        function hitung(){
+            let r = Number(document.getElementById("jari2").value);
+            
+            let luas_lingkaran = Math.PI * r * r;
+            let keliling_lingkaran = 2 * Math.PI * r;
+
+            console.log(Math.PI);
+            console.log (r);
+            console.log(luas_lingkaran);
+            console.log(keliling_lingkaran);
+
+            document.getElementById("luasLingkaran").value=luas_lingkaran;
+            document.getElementById("kelilingLingkaran").value=keliling_lingkaran;
+            document.addEventListener('submit', (event) => {
+                    event.preventDefault();
+                });
+
+            window.alert("Jadi Luas Lingkaran dengan Jari-jari " + r + " adalah " + luas_lingkaran + " dan Kelilingnya yaitu " + keliling_lingkaran);
+        }
+            function hapus_form(){
+                document.getElementById("form1").reset();
+            }
+    </script>
+
+    <title>JS 1 Luas & Keliling Lingkaran</title>
+</head>
+<body>
+    <div class="container">
+        <form id="form1">
+            <div class="form" id="hitung">
+                <h3 class="form__tittle">Luas dan Keliling Lingkaran</h3>
+                <div class="form__input-group">
+                    <input type="text" class="form__input" autofocus placeholder="Jari-jari Lingkaran" id="jari2" value=""/>
+                </div>
+    
+                <div class="form__input-group">
+                    <div class="padding"></div>
+                    <a href="#"><button class="form__button" id="hitungButton" onclick="hitung()">Hitung Hasil</button></a>
+                    <div class="padding"></div>
+                    <label for="luas">Luas lingkaran</label>
+                    <input type="text" class="form__input" autofocus placeholder="Luas Lingkaran" id="luasLingkaran" value=""/>
+                    <div class="padding"></div>
+                    <label for="keliling">Keliling Lingkaran</label>
+                    <input type="text" class="form__input" autofocus placeholder="Keliling Lingkaran" id="kelilingLingkaran" value=""/>
+                </div>
+    
+                <div class="utkreset">
+                    <button type="reset" id="hapus" class="hapuss" onclick="hapus_form()"><img src="reset.svg" alt="reset"></button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

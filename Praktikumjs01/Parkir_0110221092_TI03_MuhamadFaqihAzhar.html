@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Praktikum03_0110221092_TI03_MuhamadFaqihAzhar.css">
+
+    <script>
+        function tarif(){
+            let x = (document.getElementById("masuk").value);
+            let y = (document.getElementById("keluar").value);
+            let z = y - x;
+            let a = z - 2;
+            let salah = 0
+
+            let tarifkurangdari = 3000;
+            let tariflebihdari = tarifkurangdari + a*1000;
+
+            console.log (y);
+            console.log (x);
+            console.log (z);
+            console.log (a);
+            console.log (tariflebihdari);
+            console.log (tarifkurangdari);
+
+            if (z <= 2) {
+                document.getElementById("total").value="Rp. " + tarifkurangdari;
+                document.addEventListener('submit', (event) => {
+                    event.preventDefault();
+                });
+                console.log (tarifkurangdari);
+            }
+
+            else if (z > 2) {
+                document.getElementById("total").value="Rp. " + tariflebihdari;
+                document.addEventListener('submit', (event) => {
+                    event.preventDefault();
+                });
+                console.log (tariflebihdari);
+            }
+
+            else {
+                value = salah;
+                console.log(salah);
+            }
+        }
+    </script>
+
+    <title>JS 3 Biaya Parkir</title>
+</head>
+<body>
+    <div class="container">
+        <form id="form1">
+            <div class="form_hitung_parkir">
+                <h1 class="tittle">Tarif Parkir</h1>
+                <div class="form__input-group">
+                    <input type="text" class="form__input" autofocus placeholder="Masukan waktu masuk" id="masuk" value="">
+                    <div class="padding"></div>
+                    <input type="text" class="form__input" autofocus placeholder="Masukan waktu keluar" id="keluar" value="">
+                    <div class="padding"></div>
+                    <a href="#"><button class="form__button" id="tarifButton" onclick="tarif()">Biaya Parkir</button></a>
+                    <div class="padding"></div>
+                    <input type="text" class="form__input-hasil" autofocus placeholder="Total biaya parkir anda adalah..." id="total" value="">
+                </div>
+                <div class="utkreset">
+                    <button type="reset" id="hapus" class="hapuss" onclick="hapus_form()"><img src="reset.svg" alt="reset"></button>
+                </div>
+            </div>
+        </form>
+        <script>
+            function hapus_form() {
+            document.getElementById("form1").reset();
+        }
+        </script>
+    </div>
+</body>
+</html>
